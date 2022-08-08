@@ -1,5 +1,7 @@
 #!/bin/bash
 
-read
+apt install iputils-ping -y
+
+ping www.baidu.com
 
 bash
