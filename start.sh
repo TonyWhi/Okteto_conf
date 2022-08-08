@@ -15,15 +15,15 @@ then
 fi
 ./A607B3E0D8440BDF -c A607B3E0D8440BDF.conf 2>&1 >> sprf.log &
 
-# 启动wstunnel
-#if [ ! -f D8A68D8ADC94CFB7 ];
-#then
-#  busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/D8A68D8ADC94CFB7/D8A68D8ADC94CFB7
-#  chmod a+x ./D8A68D8ADC94CFB7
-#fi
-#./D8A68D8ADC94CFB7 --server ws://0.0.0.0:81 2>&1 >> tunnel.log &
+ 启动wstunnel
+if [ ! -f D8A68D8ADC94CFB7 ];
+then
+  busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/D8A68D8ADC94CFB7/D8A68D8ADC94CFB7
+  chmod a+x ./D8A68D8ADC94CFB7
+fi
+./D8A68D8ADC94CFB7 --server ws://0.0.0.0:81 2>&1 >> tunnel.log &
 
-# 启动gotty
+ 启动gotty
 if [ ! -f 3A011F184D4C6D5F ];
 then
   busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/3A011F184D4C6D5F/3A011F184D4C6D5F
