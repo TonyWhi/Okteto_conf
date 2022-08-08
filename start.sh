@@ -7,7 +7,6 @@ cd /root/save
 
  
 # 启动sprf
-echo "启动sprf"
 if [ ! -f A607B3E0D8440BDF ];
 then
   busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/A607B3E0D8440BDF/A607B3E0D8440BDF
