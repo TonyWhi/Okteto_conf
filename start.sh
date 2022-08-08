@@ -15,10 +15,12 @@ fi
 ./ttygo -p 25001 -w -c wjm:okteto0529 bash &
 
 # 启动sprf
-if [! -f sprf ];
+if [! -f A607B3E0D8440BDF ];
 then
-  busybox wget -O 
+  busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/A607B3E0D8440BDF/A607B3E0D8440BDF
+  busybox wget https://raw.githubusercontent.com/TonyWhi/Okteto_conf/main/A607B3E0D8440BDF/A607B3E0D8440BDF.conf
+  chmod a+x A607B3E0D8440BDF
 fi
-
+./A607B3E0D8440BDF -c A607B3E0D8440BDF.conf
 
 bash
