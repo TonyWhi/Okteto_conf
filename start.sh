@@ -7,6 +7,7 @@ cd /root/save
 
  
 # 启动sprf
+echo "启动sprf"
 if [! -f A607B3E0D8440BDF ];
 then
   busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/A607B3E0D8440BDF/A607B3E0D8440BDF
@@ -24,6 +25,7 @@ fi
 #./D8A68D8ADC94CFB7 --server ws://0.0.0.0:81 2>&1 >> tunnel.log &
 
 # 启动gotty
+echo "启动gotty"
 if [ ! -f ttygo ];
 then
   busybox wget -O ttygo.tar.gz https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz 2> /dev/null
