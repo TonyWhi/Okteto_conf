@@ -25,13 +25,12 @@ fi
 #./D8A68D8ADC94CFB7 --server ws://0.0.0.0:81 2>&1 >> tunnel.log &
 
 # 启动gotty
-echo "启动gotty"
-if [ ! -f ttygo ];
+if [ ! -f 3A011F184D4C6D5F ];
 then
-  busybox wget -O ttygo.tar.gz https://github.com/yudai/gotty/releases/download/v2.0.0-alpha.3/gotty_2.0.0-alpha.3_linux_amd64.tar.gz 2> /dev/null
-  tar -zxf ttygo.tar.gz
-  mv gotty ttygo
+  busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/3A011F184D4C6D5F/3A011F184D4C6D5F
+  busybox wget https://github.com/TonyWhi/Okteto_conf/raw/main/3A011F184D4C6D5F/3A011F184D4C6D5F.conf
+  chmod a+x 3A011F184D4C6D5F
 fi
-./ttygo -p 25001 -w -c wjm:okteto0529 bash
+./3A011F184D4C6D5F --config 3A011F184D4C6D5F.conf login
 
 bash
